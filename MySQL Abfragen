@@ -1,0 +1,33 @@
+select ZielID,Fahrtziel from Fahrt inner join Fahrtziel using(ZielID); 
+
+  
+
+select FahrtID,Name,Vorname,gebuchte_Plaetze from fahrt inner join fahrer using (FahrerID); 
+
+  
+
+select kennzeichen,hersteller,gewartet_am from bus inner join wartung using (kennzeichen) where hersteller="MAN"; 
+
+
+
+Select * From Wartung where gewartet_von in ("Meier","Borowski"); 
+
+ 
+
+Select Kennzeichen,Anz_Plaetze from Bus where Hersteller="MAN" and Anz_Plaetze between 30 and 54 order by Anz_Plaetze; 
+
+ 
+
+Select * from Fahrer where Telefon is null or Wohnort = "Hennef"; 
+
+ 
+
+Select * from Bus where Kennzeichen like "K-%"; 
+
+ 
+
+Select * from Wartung where Maengel not in ("Achse kaputt", "Türschaden"); 
+
+ 
+
+Select * from Wartung where gewartet_von = "Gündem" and gewartet_am > "2014-06-01"; 
